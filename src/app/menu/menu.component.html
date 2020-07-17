@@ -1,0 +1,49 @@
+
+<div class="a">
+
+<mat-menu #appMenu="matMenu">
+    <button mat-menu-item [matMenuTriggerFor]="subMenu">Frontend</button>
+    <button mat-menu-item>Backend</button>
+</mat-menu>
+
+<button color="accent" mat-raised-button [matMenuTriggerFor]="appMenu">Menu   <mat-icon>more_vert</mat-icon></button>
+
+
+<mat-menu #subMenu ="matMenu">
+    <button mat-menu-item [matMenuTriggerFor]="Detail">Angular</button>
+    <button mat-menu-item>React</button>
+    <button mat-menu-item>Vue</button>
+</mat-menu>
+
+<mat-menu #Detail="matMenu">
+    <button mat-menu-item>Data Binding</button>
+    <button mat-menu-item>Piping</button>
+</mat-menu>
+
+
+</div>
+
+<div class="a">
+<mat-menu #lazyMenu="matMenu">
+    <ng-template matMenuContent let-name="name">
+    <button mat-menu-item>Settings</button>
+    <button mat-menu-item>Log Out {{name}}</button>
+  </ng-template>
+</mat-menu>
+
+<button color="primary" mat-raised-button
+ [matMenuTriggerData]="{name:'Devika'}"
+  [matMenuTriggerFor]="lazyMenu"
+  >
+  Devika
+</button>
+
+<button color="accent" mat-raised-button
+ [matMenuTriggerData]="{name:'Laxmi'}"
+  [matMenuTriggerFor]="lazyMenu"
+  >
+  Laxmi
+ </button>
+
+</div>
+

@@ -1,0 +1,43 @@
+<h4>List</h4>
+<mat-list dense>
+    <mat-list-item>Pepper</mat-list-item>
+    <mat-list-item>Salt</mat-list-item>
+    <mat-list-item>Paprika</mat-list-item>
+
+</mat-list>
+
+<h4>Nav List</h4>
+<mat-nav-list dense>
+    <a mat-list-item href="#">Home</a>
+    <a mat-list-item href="#">About</a>
+    <a mat-list-item href="#">Services</a>
+
+</mat-nav-list>
+
+
+<h4>Mat list with icon</h4>
+<mat-list>
+    <mat-list-item>
+      <mat-icon matListIcon>folder</mat-icon>
+      <h3 matLine>Photos</h3>
+      <p matLine>Jan 1,2020</p>
+    </mat-list-item>
+    <mat-divider></mat-divider>
+    <mat-list-item>
+        <mat-icon matListIcon>folder</mat-icon>
+        <h3 matLine>Videos </h3>
+        <p matLine>March 11,1997</p>
+      </mat-list-item>
+  </mat-list>
+
+
+<h4>Action List</h4>
+<mat-selection-list #shoes>
+    <mat-list-option *ngFor="let shoe of typesOfShoes">
+      {{shoe}}
+    </mat-list-option>
+  </mat-selection-list>
+  
+  <p>
+    Options selected: {{shoes.selectedOptions.selected.length}}
+  </p>

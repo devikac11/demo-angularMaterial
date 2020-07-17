@@ -1,0 +1,36 @@
+<!-- <mat-progress-spinner value="100"></mat-progress-spinner> -->
+<div>
+    <label>Progress spinner</label>
+<mat-spinner *ngIf=showSpinner></mat-spinner>
+<button (click)="loadData()">Load Data</button>
+
+</div>
+
+<hr>
+
+<div>
+      <label>Progress Bar</label>
+          <section class="example-section">
+            <mat-progress-bar
+                class="example-margin"
+                [color]="color"
+                [mode]="mode"
+                [value]="value"
+                [bufferValue]="bufferValue">
+            </mat-progress-bar>
+          </section>
+    
+</div>
+
+<hr>
+
+<div>
+    <label>Mat Chip</label>
+    
+    <mat-chip-list aria-label="Fish selection">
+        <mat-chip>One fish</mat-chip>
+        <mat-chip>Two fish</mat-chip>
+        <mat-chip color="primary" selected>Primary fish</mat-chip>
+        <mat-chip color="accent" selected>Accent fish</mat-chip>
+      </mat-chip-list>
+</div>
